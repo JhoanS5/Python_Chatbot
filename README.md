@@ -1,5 +1,6 @@
-# 🤖 Chatbot API experto en Python
-Este proyecto es una API REST basada en FastAPI que funciona como un chatbot experto en Python. Utiliza el modelo Mistral a través de OpenRouter (compatible con la API de OpenAI) para generar respuestas conversacionales.
+# 🤖 Chatbot API (FastAPI) experto en Java y Spring Boot
+
+Este proyecto es una API REST desarrollada con **FastAPI (Python)** que funciona como un chatbot experto en **Java y Spring Boot (versiones 3+ preferiblemente)**. Utiliza el modelo Mistral a través de OpenRouter (compatible con la API de OpenAI) para generar respuestas conversacionales especializadas en el ecosistema Java.
 
 ## 🚀 Requisitos
 - Python 3.8 o superior
@@ -10,17 +11,17 @@ Este proyecto es una API REST basada en FastAPI que funciona como un chatbot exp
 1. Clona este repositorio o descarga los archivos
 2. Crea un entorno virtual:
 ```bash
-python -m venv venv  
+   python -m venv venv
 ```
 3. Activa el entorno virtual:
-   - Windows: venv\Scripts\activate
+   - Windows: ./venv/Scripts/activate
    - macOS/Linux: source venv/bin/activate
 4. Instala las dependencias:
 ```bash
 pip install -r requirements.txt  
 ```
 5. Crea un archivo .env en la raíz del proyecto con:
-```env
+```bash
 API_KEY=tu_api_key_de_openrouter  
 BASE_URL=https://openrouter.ai/api/v1  
 ```
@@ -28,18 +29,18 @@ BASE_URL=https://openrouter.ai/api/v1
 ## ▶ Ejecución
 Inicia el servidor con:
 ```bash
-uvicorn main:app --reload  
+uvicorn chatbot:app --reload  
 ```
 - API disponible en: http://127.0.0.1:8000
 - Documentación Swagger UI: http://127.0.0.1:8000/docs
 
 ## 📬 Ejemplo de uso
 Petición POST a /chat:
-```json
+```bash
 {"pregunta": "¿Qué es una lista en Python?"}  
 ```
 Respuesta esperada:
-```json
+```bash
 {"respuesta": "Una lista en Python es una colección ordenada y mutable de elementos..."}  
 ```
 
@@ -63,20 +64,24 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 
 ## 📁 Estructura del proyecto
-```
-chatbot-ia_python/  
-├── main.py           # API con FastAPI  
-├── config.py         # Contiene el PROMPT_SISTEMA  
-├── .env              # Variables de entorno  
-├── requirements.txt  # Dependencias  
-├── Dockerfile        # Configuración para Docker  
-└── README.md  
+```bash
+.
+├── __pycache__/             # Carpeta de caché de Python
+├── static/                  # Archivos estáticos del frontend (HTML, CSS, JS)
+├── venv/                    # Entorno virtual de Python
+├── .env                     # Variables de entorno (NO se sube a Git)
+├── .env.example             # Ejemplo de archivo .env para configuración
+├── .gitignore               # Archivo para ignorar ficheros en Git
+├── chatbot.py               # Lógica principal de la API FastAPI y la interacción con la IA
+├── config.py                # Contiene el PROMPT_SISTEMA para el chatbot
+├── README.md                # Este archivo
+├── requirements.txt         # Dependencias del proyecto Python
+└── version.txt              # Archivo opcional para la versión del proyecto
 ```
 
-## 👨‍💻 Autor
-Ing. Cristian Díaz
-
+## 👨‍💻 Autores
+Ing. Cristian Díaz  
+  
+Tnlgo. Jhoan Diaz
 ---
-<p align="center">
-  <img width="300" src="https://i.imgur.com/YYf2LgH.png">
-</p>
+
