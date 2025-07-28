@@ -69,14 +69,14 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 ├── __pycache__/             # Carpeta de caché de Python
 ├── static/                  # Archivos estáticos del frontend (HTML, CSS, JS)
 ├── venv/                    # Entorno virtual de Python
-├── .env                     # Variables de entorno (NO se sube a Git)
+├── .env                     
 ├── .env.example             # Ejemplo de archivo .env para configuración
-├── .gitignore               # Archivo para ignorar ficheros en Git
-├── chatbot.py               # Lógica principal de la API FastAPI y la interacción con la IA
+├── .gitignore               
+├── chatbot.py               
 ├── config.py                # Contiene el PROMPT_SISTEMA para el chatbot
-├── README.md                # Este archivo
+├── README.md                
 ├── requirements.txt         # Dependencias del proyecto Python
-└── version.txt              # Archivo opcional para la versión del proyecto
+└── version.txt              
 ```
 
 ## 👨‍💻 Autores
